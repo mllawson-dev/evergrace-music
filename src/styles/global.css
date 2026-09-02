@@ -1,0 +1,129 @@
+/* Tailwind, utilities only — no preflight/base reset. This project already
+   ships its own considered reset and element defaults below, so Tailwind is
+   scoped to layout/motion utility classes rather than resetting the page. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@import '@fontsource/bricolage-grotesque/500.css';
+@import '@fontsource/bricolage-grotesque/600.css';
+@import '@fontsource/karla/400.css';
+@import '@fontsource/karla/500.css';
+@import './tokens.css';
+
+/* Alias existing --eg- tokens into Tailwind's theme namespace so utility
+   classes (bg-eg-gold-500, duration-eg-base, ease-eg-standard, text-eg-display…)
+   read the same source of truth as the rest of the component CSS below —
+   nothing here duplicates a value, it only points at tokens.css.
+   Tailwind's own numeric spacing scale is already 4px-based like
+   --eg-space-*, so gap-1/p-4/gap-6/gap-8/gap-12/gap-16 line up with
+   --eg-space-1/3/4/5/6/7 respectively — no spacing alias needed. */
+@theme inline {
+  --color-eg-charcoal-900: var(--eg-charcoal-900);
+  --color-eg-charcoal-800: var(--eg-charcoal-800);
+  --color-eg-charcoal-600: var(--eg-charcoal-600);
+  --color-eg-gold-500: var(--eg-gold-500);
+  --color-eg-gold-300: var(--eg-gold-300);
+  --color-eg-cream-100: var(--eg-cream-100);
+  --color-eg-cream-400: var(--eg-cream-400);
+  --color-eg-worship-500: var(--eg-worship-500);
+  --color-eg-worship-300: var(--eg-worship-300);
+  --color-eg-rock-500: var(--eg-rock-500);
+  --color-eg-rock-300: var(--eg-rock-300);
+  --color-eg-country-500: var(--eg-country-500);
+  --color-eg-country-300: var(--eg-country-300);
+
+  --font-eg-heading: var(--eg-font-heading);
+  --font-eg-body: var(--eg-font-body);
+
+  --text-eg-4xl: var(--eg-text-4xl);
+  --text-eg-display: var(--eg-text-display);
+
+  --radius-eg-sm: var(--eg-radius-sm);
+  --radius-eg-md: var(--eg-radius-md);
+
+  --ease-eg-standard: var(--eg-ease-standard);
+  --ease-eg-out: var(--eg-ease-out);
+  --ease-eg-in-out: var(--eg-ease-in-out);
+
+  /* Named animate-* utilities (not arbitrary animate-[…] values — this
+     Vite/Tailwind combo doesn't reliably generate bracket arbitrary-value
+     utilities, named theme entries do). Each references a @keyframes
+     defined in the owning component's plain CSS file. */
+  --animate-eg-eq-bar: eg-eq-bar 1.1s ease-in-out infinite;
+  --animate-eg-ray-drift: eg-ray-drift 50s linear infinite;
+  --animate-eg-hero-reveal: eg-hero-reveal 700ms var(--eg-ease-out) both;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--eg-charcoal-900);
+  color: var(--eg-cream-100);
+  font-family: var(--eg-font-body);
+  font-size: var(--eg-text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  margin: 0;
+  color: var(--eg-gold-500);
+}
+
+a {
+  color: var(--eg-gold-300);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--eg-gold-300);
+  outline-offset: 2px;
+}
+
+button {
+  font-family: var(--eg-font-body);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Shared grain-texture surface — the atmospheric layer introduced on the
+   homepage hero, extracted here so every page can use it instead of each
+   duplicating the same background-image rule. Apply alongside a page's own
+   layout class: className="eg-roster-page eg-grain-surface". */
+.eg-grain-surface {
+  position: relative;
+}
+
+.eg-grain-surface::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.eg-grain-surface > * {
+  position: relative;
+  z-index: 1;
+}

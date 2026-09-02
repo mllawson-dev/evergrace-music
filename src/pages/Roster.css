@@ -1,0 +1,29 @@
+.eg-roster-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--eg-space-5) var(--eg-space-4) var(--eg-space-7);
+}
+
+.eg-roster-page__heading {
+  font-size: var(--eg-text-3xl);
+  text-align: center;
+  margin-bottom: var(--eg-space-4);
+}
+
+.eg-roster-page__filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--eg-space-3);
+  margin-bottom: var(--eg-space-6);
+}
+
+.eg-roster-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--eg-space-4);
+}
+
+.eg-roster-page__empty {
+  text-align: center;
+  color: var(--eg-cream-400);
+}

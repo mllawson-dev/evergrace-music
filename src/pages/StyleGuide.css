@@ -1,0 +1,115 @@
+.eg-style-guide {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--eg-space-6) var(--eg-space-4);
+}
+
+.eg-style-guide section {
+  margin-bottom: var(--eg-space-7);
+}
+
+.eg-style-guide h2 {
+  font-size: var(--eg-text-xl);
+  border-bottom: 1px solid var(--eg-charcoal-600);
+  padding-bottom: var(--eg-space-2);
+  margin-bottom: var(--eg-space-4);
+}
+
+.eg-style-guide h3 {
+  font-size: var(--eg-text-sm);
+  color: var(--eg-cream-400);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--eg-space-2);
+}
+
+.eg-style-guide__note {
+  color: var(--eg-cream-400);
+  font-size: var(--eg-text-sm);
+}
+
+.eg-style-guide__row {
+  margin-bottom: var(--eg-space-4);
+}
+
+.eg-style-guide__demo-row {
+  display: flex;
+  gap: var(--eg-space-3);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.eg-swatch-grid {
+  display: flex;
+  gap: var(--eg-space-3);
+  flex-wrap: wrap;
+}
+
+.eg-swatch {
+  width: 120px;
+}
+
+.eg-swatch__color {
+  height: 64px;
+  border-radius: var(--eg-radius-sm);
+  border: 1px solid var(--eg-charcoal-600);
+}
+
+.eg-swatch p {
+  font-size: var(--eg-text-xs);
+  color: var(--eg-cream-400);
+  margin: var(--eg-space-1) 0 0;
+}
+
+.eg-type-scale {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eg-space-3);
+}
+
+.eg-style-guide__card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--eg-space-3);
+}
+
+.eg-style-guide__compact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eg-space-2);
+  max-width: 420px;
+}
+
+.eg-style-guide__display-sample {
+  margin: 0;
+  line-height: 1;
+  color: var(--eg-gold-500);
+}
+
+.eg-style-guide__motion-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--eg-space-2);
+  font-size: var(--eg-text-xs);
+  color: var(--eg-cream-400);
+}
+
+.eg-style-guide__motion-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--eg-charcoal-600);
+  flex-shrink: 0;
+  transition-property: background-color;
+  transition-timing-function: var(--eg-ease-standard);
+}
+
+.eg-style-guide__motion-chip:hover .eg-style-guide__motion-dot {
+  background: var(--eg-gold-500);
+}
+
+.eg-style-guide__hero-player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--eg-space-3);
+}

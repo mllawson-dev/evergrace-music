@@ -1,0 +1,84 @@
+.eg-tour-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.eg-tour-row {
+  display: flex;
+  align-items: center;
+  gap: var(--eg-space-4);
+  padding: var(--eg-space-3) 0;
+  border-bottom: 1px solid var(--eg-charcoal-600);
+  font-size: var(--eg-text-sm);
+}
+
+.eg-tour-row__date {
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  color: var(--eg-gold-500);
+  min-width: 96px;
+}
+
+.eg-tour-row__location {
+  flex: 1;
+  color: var(--eg-cream-100);
+}
+
+.eg-tour-row__artist {
+  display: block;
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  font-size: var(--eg-text-base);
+  color: var(--eg-cream-100);
+}
+
+.eg-tour-row__venue {
+  color: var(--eg-cream-400);
+}
+
+.eg-tour-row--sold-out .eg-tour-row__location {
+  color: var(--eg-cream-400);
+}
+
+.eg-tour-row--past {
+  opacity: 0.5;
+}
+
+.eg-tour-row--past .eg-tour-row__date {
+  color: var(--eg-cream-400);
+}
+
+.eg-tour-row__flag {
+  font-size: var(--eg-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--eg-cream-400);
+}
+
+/* Below this width the rigid single-line row squeezes artist name and venue
+   into an unreadably narrow column. Wrap into two lines instead: date + action
+   on top, full-width location below. */
+@media (max-width: 560px) {
+  .eg-tour-row {
+    flex-wrap: wrap;
+  }
+
+  .eg-tour-row__date {
+    order: 1;
+    min-width: auto;
+  }
+
+  .eg-tour-row__action,
+  .eg-tour-row__flag {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .eg-tour-row__location {
+    order: 3;
+    flex-basis: 100%;
+  }
+}

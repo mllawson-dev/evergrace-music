@@ -1,0 +1,37 @@
+.eg-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--eg-font-body);
+  font-weight: 500;
+  font-size: var(--eg-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--eg-space-1) var(--eg-space-3);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.eg-badge--interactive {
+  cursor: pointer;
+  transition: opacity var(--eg-motion-fast) var(--eg-ease-standard);
+}
+
+.eg-badge--interactive.eg-badge--inactive {
+  opacity: 0.45;
+}
+
+.eg-badge--worship {
+  color: var(--eg-worship-300);
+  border-color: var(--eg-worship-500);
+}
+
+.eg-badge--rock {
+  color: var(--eg-rock-300);
+  border-color: var(--eg-rock-500);
+}
+
+.eg-badge--country {
+  color: var(--eg-country-300);
+  border-color: var(--eg-country-500);
+}

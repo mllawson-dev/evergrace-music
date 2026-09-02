@@ -1,0 +1,17 @@
+.eg-tour-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--eg-space-5) var(--eg-space-4) var(--eg-space-7);
+}
+
+.eg-tour-page__heading {
+  font-size: var(--eg-text-3xl);
+  text-align: center;
+  margin-bottom: var(--eg-space-2);
+}
+
+.eg-tour-page__note {
+  text-align: center;
+  color: var(--eg-cream-400);
+  margin-bottom: var(--eg-space-5);
+}

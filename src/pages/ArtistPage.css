@@ -1,0 +1,101 @@
+.eg-artist-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--eg-space-5) var(--eg-space-4) var(--eg-space-7);
+}
+
+.eg-artist-page--not-found {
+  text-align: center;
+  padding-top: var(--eg-space-7);
+}
+
+.eg-artist-page__back {
+  display: inline-block;
+  font-size: var(--eg-text-sm);
+  color: var(--eg-cream-400);
+  text-decoration: none;
+  margin-bottom: var(--eg-space-5);
+}
+
+.eg-artist-page__back:hover {
+  color: var(--eg-gold-500);
+}
+
+.eg-artist-page__header {
+  display: flex;
+  gap: var(--eg-space-5);
+  align-items: flex-start;
+  margin-bottom: var(--eg-space-6);
+}
+
+.eg-artist-page__photo {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  background: var(--eg-charcoal-800);
+  border-radius: var(--eg-radius-md);
+  overflow: hidden;
+}
+
+/* Photo sizing/fallback styling now lives in the shared ArtistPhoto component */
+
+.eg-artist-page__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--eg-space-2);
+}
+
+.eg-artist-page__name {
+  font-size: var(--eg-text-3xl);
+  margin: 0;
+}
+
+.eg-artist-page__tagline {
+  color: var(--eg-cream-400);
+  margin: 0 0 var(--eg-space-2);
+}
+
+.eg-artist-page--worship .eg-artist-page__name {
+  color: var(--eg-worship-300);
+}
+
+.eg-artist-page--rock .eg-artist-page__name {
+  color: var(--eg-rock-300);
+}
+
+.eg-artist-page--country .eg-artist-page__name {
+  color: var(--eg-country-300);
+}
+
+.eg-artist-page__section {
+  padding: var(--eg-space-5) 0;
+  border-top: 1px solid var(--eg-charcoal-600);
+}
+
+.eg-artist-page__player {
+  max-width: 360px;
+}
+
+.eg-artist-page__section h2 {
+  font-size: var(--eg-text-lg);
+  margin-bottom: var(--eg-space-3);
+}
+
+.eg-artist-page__bio {
+  color: var(--eg-cream-100);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .eg-artist-page__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .eg-artist-page__intro {
+    align-items: center;
+  }
+}

@@ -1,0 +1,82 @@
+.eg-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--eg-space-2);
+  font-family: var(--eg-font-body);
+  font-weight: 500;
+  font-size: var(--eg-text-sm);
+  padding: var(--eg-space-2) var(--eg-space-4);
+  border-radius: var(--eg-radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--eg-motion-fast) var(--eg-ease-standard),
+    border-color var(--eg-motion-fast) var(--eg-ease-standard),
+    color var(--eg-motion-fast) var(--eg-ease-standard),
+    transform var(--eg-motion-fast) var(--eg-ease-out);
+}
+
+.eg-button:focus-visible {
+  outline: 2px solid var(--eg-gold-300);
+  outline-offset: 2px;
+}
+
+.eg-button:active {
+  transform: scale(0.98);
+}
+
+.eg-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+}
+
+/* Primary: gold fill, dark text */
+.eg-button--primary {
+  background: var(--eg-gold-500);
+  color: var(--eg-charcoal-900);
+}
+
+.eg-button--primary:hover:not(:disabled) {
+  background: var(--eg-gold-300);
+}
+
+/* Secondary: outline, transparent fill */
+.eg-button--secondary {
+  background: transparent;
+  color: var(--eg-cream-100);
+  border-color: var(--eg-charcoal-600);
+}
+
+.eg-button--secondary:hover:not(:disabled) {
+  border-color: var(--eg-gold-500);
+  color: var(--eg-gold-500);
+}
+
+/* Streaming: same weight as primary, but neutral so it doesn't compete with platform branding */
+.eg-button--streaming {
+  background: var(--eg-charcoal-800);
+  color: var(--eg-cream-100);
+  border-color: var(--eg-charcoal-600);
+}
+
+.eg-button--streaming:hover:not(:disabled) {
+  border-color: var(--eg-gold-500);
+}
+
+/* Merch: styled like secondary */
+.eg-button--merch {
+  background: transparent;
+  color: var(--eg-gold-500);
+  border-color: var(--eg-gold-500);
+}
+
+.eg-button--merch:hover:not(:disabled) {
+  background: var(--eg-gold-500);
+  color: var(--eg-charcoal-900);
+}
+
+.eg-button__icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--eg-text-base);
+}

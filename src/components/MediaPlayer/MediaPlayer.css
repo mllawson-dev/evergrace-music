@@ -1,0 +1,225 @@
+.eg-media-player {
+  display: flex;
+  align-items: center;
+  gap: var(--eg-space-3);
+  background: var(--eg-charcoal-800);
+  border: 1px solid var(--eg-charcoal-600);
+  border-radius: var(--eg-radius-md);
+  padding: var(--eg-space-3);
+}
+
+.eg-media-player--compact {
+  padding: var(--eg-space-2);
+}
+
+/* Hero: the "glowing focal object" slot — bigger, genre-accented, with an
+   ambient glow behind the toggle and a decorative equalizer that only
+   animates while audio is actually playing. --eg-player-accent defaults to
+   Warm Gold; a data-genre attribute swaps in that genre's accent so an
+   ArtistPage player can pick up its own division color. */
+.eg-media-player--hero {
+  --eg-player-accent: var(--eg-gold-500);
+  --eg-player-accent-soft: var(--eg-gold-300);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--eg-space-4);
+  padding: var(--eg-space-6) var(--eg-space-5);
+  background: linear-gradient(180deg, var(--eg-charcoal-800), var(--eg-charcoal-900));
+  border-color: color-mix(in srgb, var(--eg-player-accent) 35%, var(--eg-charcoal-600));
+}
+
+.eg-media-player--hero[data-genre='worship'] {
+  --eg-player-accent: var(--eg-worship-500);
+  --eg-player-accent-soft: var(--eg-worship-300);
+}
+
+.eg-media-player--hero[data-genre='rock'] {
+  --eg-player-accent: var(--eg-rock-500);
+  --eg-player-accent-soft: var(--eg-rock-300);
+}
+
+.eg-media-player--hero[data-genre='country'] {
+  --eg-player-accent: var(--eg-country-500);
+  --eg-player-accent-soft: var(--eg-country-300);
+}
+
+.eg-media-player__control {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eg-media-player--hero .eg-media-player__control {
+  width: 88px;
+  height: 88px;
+}
+
+.eg-media-player__glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: var(--eg-player-accent);
+  filter: blur(20px);
+  opacity: 0.55;
+  animation: eg-glow-pulse var(--eg-motion-ambient) var(--eg-ease-in-out) infinite;
+  pointer-events: none;
+}
+
+.eg-media-player__toggle {
+  flex-shrink: 0;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--eg-gold-500);
+  color: var(--eg-charcoal-900);
+  font-size: var(--eg-text-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--eg-motion-fast) var(--eg-ease-out);
+}
+
+.eg-media-player--hero .eg-media-player__toggle {
+  width: 64px;
+  height: 64px;
+  font-size: var(--eg-text-xl);
+  background: var(--eg-player-accent);
+  color: var(--eg-cream-100);
+}
+
+.eg-media-player__toggle:hover:not(:disabled) {
+  transform: scale(1.04);
+}
+
+.eg-media-player__toggle:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.eg-media-player__toggle:focus-visible {
+  outline: 2px solid var(--eg-gold-300);
+  outline-offset: 2px;
+}
+
+.eg-media-player__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.eg-media-player--hero .eg-media-player__info {
+  flex: none;
+  width: 100%;
+  max-width: 360px;
+}
+
+.eg-media-player__title {
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  font-size: var(--eg-text-sm);
+  color: var(--eg-cream-100);
+  margin: 0;
+}
+
+.eg-media-player--hero .eg-media-player__title {
+  font-size: var(--eg-text-lg);
+}
+
+.eg-media-player__artist {
+  font-size: var(--eg-text-xs);
+  color: var(--eg-cream-400);
+  margin: 0 0 var(--eg-space-1);
+}
+
+.eg-media-player--hero .eg-media-player__artist {
+  font-size: var(--eg-text-sm);
+  margin-bottom: var(--eg-space-3);
+}
+
+.eg-media-player__scrub-row {
+  display: flex;
+  align-items: center;
+  gap: var(--eg-space-2);
+}
+
+.eg-media-player__scrubber {
+  flex: 1;
+  accent-color: var(--eg-gold-500);
+}
+
+.eg-media-player--hero .eg-media-player__scrubber {
+  accent-color: var(--eg-player-accent);
+}
+
+.eg-media-player__time {
+  font-size: var(--eg-text-xs);
+  color: var(--eg-cream-400);
+  min-width: 32px;
+}
+
+.eg-media-player__error {
+  font-size: var(--eg-text-xs);
+  color: var(--eg-rock-300);
+  margin: 0;
+}
+
+/* Decorative equalizer — hero variant only. Bars sit at rest (--eg-eq-rest,
+   set inline per bar in MediaPlayer.tsx) until playback is actually
+   happening; the animate-[…] class that makes them move is only applied
+   by the component while status === 'playing'. */
+.eg-media-player__equalizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 36px;
+  margin-bottom: var(--eg-space-3);
+}
+
+.eg-media-player__eq-bar {
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--eg-player-accent-soft);
+  transform: scaleY(var(--eg-eq-rest, 0.4));
+  transform-origin: bottom;
+  transition: transform var(--eg-motion-base) var(--eg-ease-standard);
+}
+
+@keyframes eg-eq-bar {
+  0%,
+  100% {
+    transform: scaleY(var(--eg-eq-rest, 0.4));
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes eg-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eg-media-player__glow {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .eg-media-player__eq-bar {
+    animation: none !important;
+  }
+}

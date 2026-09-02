@@ -1,0 +1,10 @@
+.eg-stream-merch {
+  display: flex;
+  gap: var(--eg-space-2);
+  flex-wrap: wrap;
+}
+
+.eg-stream-merch--stacked {
+  flex-direction: column;
+  align-items: stretch;
+}

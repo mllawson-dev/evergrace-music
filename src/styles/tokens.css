@@ -1,0 +1,58 @@
+:root {
+  /* Brand core */
+  --eg-charcoal-900: #16130F;
+  --eg-charcoal-800: #241F1B;
+  --eg-charcoal-600: #423B34;
+  --eg-gold-500: #C9973B;
+  --eg-gold-300: #E0BB74;
+  --eg-cream-100: #F3E9D2;
+  --eg-cream-400: #B8AD97;
+
+  /* Genre accents */
+  --eg-worship-500: #4A2F6B;
+  --eg-worship-300: #7A5A9E;
+  --eg-rock-500: #B23A2E;
+  --eg-rock-300: #D8695C;
+  --eg-country-500: #A66A3E;
+  --eg-country-300: #C99569;
+
+  /* Type */
+  --eg-font-heading: 'Bricolage Grotesque', sans-serif;
+  --eg-font-body: 'Karla', sans-serif;
+
+  --eg-text-xs: 13px;
+  --eg-text-sm: 15px;
+  --eg-text-base: 16px;
+  --eg-text-lg: 20px;
+  --eg-text-xl: 25px;
+  --eg-text-2xl: 31px;
+  --eg-text-3xl: 39px;
+  --eg-text-4xl: 49px;
+  /* Fluid display size for oversized/ghosted wordmark treatments. Not for
+     ordinary headings — reaches for --eg-text-4xl or below for those. */
+  --eg-text-display: clamp(4rem, 6rem + 8vw, 13rem);
+
+  /* Spacing (4px base) */
+  --eg-space-1: 4px;
+  --eg-space-2: 8px;
+  --eg-space-3: 16px;
+  --eg-space-4: 24px;
+  --eg-space-5: 32px;
+  --eg-space-6: 48px;
+  --eg-space-7: 64px;
+
+  /* Radius */
+  --eg-radius-sm: 4px;
+  --eg-radius-md: 8px;
+
+  /* Motion. Keep durations/easings on these tokens (in plain CSS
+     transitions/@keyframes, or via the ease-eg- Tailwind utilities aliased
+     in global.css) rather than one-off values, so animation stays systemized. */
+  --eg-motion-fast: 150ms;
+  --eg-motion-base: 300ms;
+  --eg-motion-slow: 600ms;
+  --eg-motion-ambient: 4000ms; /* slow ambient loops: glow pulses, waveform idle motion */
+  --eg-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --eg-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --eg-ease-in-out: cubic-bezier(0.4, 0, 0.6, 1);
+}

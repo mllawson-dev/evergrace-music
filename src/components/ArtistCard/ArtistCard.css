@@ -1,0 +1,123 @@
+.eg-artist-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--eg-charcoal-800);
+  border: 1px solid var(--eg-charcoal-600);
+  border-radius: var(--eg-radius-md);
+  overflow: hidden;
+  transition: transform var(--eg-motion-base) var(--eg-ease-out),
+    border-color var(--eg-motion-base) var(--eg-ease-standard),
+    box-shadow var(--eg-motion-base) var(--eg-ease-standard);
+}
+
+.eg-artist-card:hover {
+  transform: translateY(-2px);
+}
+
+.eg-artist-card:focus-visible {
+  outline: 2px solid var(--eg-gold-300);
+  outline-offset: 2px;
+}
+
+.eg-artist-card--worship {
+  --eg-card-accent: var(--eg-worship-500);
+}
+
+.eg-artist-card--rock {
+  --eg-card-accent: var(--eg-rock-500);
+}
+
+.eg-artist-card--country {
+  --eg-card-accent: var(--eg-country-500);
+}
+
+.eg-artist-card:hover {
+  border-color: var(--eg-card-accent);
+  box-shadow: 0 0 28px -8px color-mix(in srgb, var(--eg-card-accent) 45%, transparent);
+}
+
+/* Default: grid tile */
+.eg-artist-card--default .eg-artist-card__photo {
+  aspect-ratio: 1 / 1;
+  background: var(--eg-charcoal-600);
+}
+
+.eg-artist-card--default .eg-artist-card__body {
+  padding: var(--eg-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--eg-space-2);
+  align-items: flex-start;
+}
+
+/* Compact: list row */
+.eg-artist-card--compact {
+  display: flex;
+  align-items: center;
+}
+
+.eg-artist-card--compact .eg-artist-card__photo {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  background: var(--eg-charcoal-600);
+}
+
+.eg-artist-card--compact .eg-artist-card__body {
+  padding: var(--eg-space-2) var(--eg-space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--eg-space-1);
+}
+
+.eg-artist-card--compact .eg-artist-card__tagline {
+  display: none;
+}
+
+/* Photo sizing/fallback styling now lives in the shared ArtistPhoto component */
+
+.eg-artist-card__name {
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  font-size: var(--eg-text-lg);
+  color: var(--eg-cream-100);
+  margin: 0;
+}
+
+.eg-artist-card__tagline {
+  font-size: var(--eg-text-sm);
+  color: var(--eg-cream-400);
+  margin: 0;
+}
+
+/* Loading skeleton */
+.eg-artist-card--loading {
+  pointer-events: none;
+}
+
+.eg-artist-card__photo--skeleton {
+  background: var(--eg-charcoal-600);
+  animation: eg-pulse 1.5s ease-in-out infinite;
+}
+
+.eg-skeleton-line {
+  height: 12px;
+  border-radius: var(--eg-radius-sm);
+  background: var(--eg-charcoal-600);
+  animation: eg-pulse 1.5s ease-in-out infinite;
+}
+
+.eg-skeleton-line--name {
+  width: 60%;
+  height: 16px;
+}
+
+.eg-skeleton-line--tagline {
+  width: 85%;
+}
+
+@keyframes eg-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

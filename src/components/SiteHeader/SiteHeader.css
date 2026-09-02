@@ -1,0 +1,43 @@
+.eg-site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--eg-space-3) var(--eg-space-4);
+}
+
+.eg-site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--eg-space-2);
+  text-decoration: none;
+  color: var(--eg-cream-100);
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  font-size: var(--eg-text-base);
+}
+
+.eg-site-header__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.eg-site-header__nav {
+  display: flex;
+  gap: var(--eg-space-4);
+}
+
+.eg-site-header__link {
+  font-size: var(--eg-text-sm);
+  color: var(--eg-cream-400);
+  text-decoration: none;
+}
+
+.eg-site-header__link:hover {
+  color: var(--eg-cream-100);
+}
+
+.eg-site-header__link--active {
+  color: var(--eg-gold-500);
+}
