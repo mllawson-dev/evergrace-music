@@ -1,0 +1,34 @@
+.eg-track-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.eg-track-list__row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--eg-space-3);
+  padding: var(--eg-space-2) 0;
+  border-bottom: 1px solid var(--eg-charcoal-600);
+  font-size: var(--eg-text-sm);
+}
+
+.eg-track-list__row:last-child {
+  border-bottom: none;
+}
+
+.eg-track-list__number {
+  font-family: var(--eg-font-heading);
+  color: var(--eg-cream-400);
+  min-width: 20px;
+}
+
+.eg-track-list__title {
+  flex: 1;
+  color: var(--eg-cream-100);
+}
+
+.eg-track-list__duration {
+  color: var(--eg-cream-400);
+  font-variant-numeric: tabular-nums;
+}

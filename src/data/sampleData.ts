@@ -11,6 +11,16 @@ export const sampleArtists: Artist[] = [
     photoUrl: '',
     streaming: { spotify: '#', appleMusic: '#' },
     merchUrl: '#',
+    album: {
+      title: 'Where Two or Three',
+      tracks: [
+        { title: 'Still Small Voice', duration: '4:12' },
+        { title: 'Kneeling Song', duration: '3:48' },
+        { title: 'Table for All', duration: '5:03' },
+        { title: 'Ashes to Amber', duration: '4:27' },
+        { title: 'Benediction', duration: '3:15' },
+      ],
+    },
   },
   {
     id: 'still-water-sound',
@@ -20,6 +30,16 @@ export const sampleArtists: Artist[] = [
     bio: 'Still Water Sound leans into the quiet end of worship — ambient pads, minimal percussion, and lyrics that read more like prayer than performance. Built for the moments in a service when nobody is trying to be impressive.',
     photoUrl: '',
     streaming: { spotify: '#', appleMusic: '#', youtube: '#' },
+    album: {
+      title: 'Selah',
+      tracks: [
+        { title: 'Before the Waking', duration: '5:20' },
+        { title: 'Selah', duration: '4:44' },
+        { title: 'Held', duration: '3:58' },
+        { title: 'Breath Prayer', duration: '6:02' },
+        { title: 'Dawn Liturgy', duration: '4:31' },
+      ],
+    },
   },
   {
     id: 'ironclad-revival',
@@ -29,6 +49,16 @@ export const sampleArtists: Artist[] = [
     bio: 'Ironclad Revival plays loud on purpose. Formed out of a youth-group garage band that never stopped touring, they bring arena-sized riffs to church basements and festival main stages alike, built for a crowd that wants to sing along at full volume.',
     photoUrl: '',
     streaming: { spotify: '#', youtube: '#' },
+    album: {
+      title: 'Forge & Flame',
+      tracks: [
+        { title: 'Battle Hymn (Redux)', duration: '3:33' },
+        { title: 'Unashamed', duration: '3:51' },
+        { title: 'Riot of Grace', duration: '4:02' },
+        { title: 'Steel Sharpens Steel', duration: '3:47' },
+        { title: 'Overcomer', duration: '4:18' },
+      ],
+    },
   },
   {
     id: 'wildfire-remnant',
@@ -39,6 +69,16 @@ export const sampleArtists: Artist[] = [
     photoUrl: '',
     streaming: { spotify: '#' },
     merchUrl: '#',
+    album: {
+      title: 'Ashes That Remain',
+      tracks: [
+        { title: 'Burn It Down', duration: '3:29' },
+        { title: 'Remnant', duration: '4:05' },
+        { title: 'Wildfire', duration: '3:44' },
+        { title: 'Scorched Earth Hymn', duration: '4:52' },
+        { title: "What's Left Standing", duration: '4:11' },
+      ],
+    },
   },
   {
     id: 'the-dusty-road',
@@ -49,6 +89,16 @@ export const sampleArtists: Artist[] = [
     photoUrl: '',
     streaming: { spotify: '#', appleMusic: '#', youtube: '#' },
     merchUrl: '#',
+    album: {
+      title: 'Harvest Moon Hymnal',
+      tracks: [
+        { title: 'Dust and Grace', duration: '3:56' },
+        { title: 'Front Porch Gospel', duration: '4:22' },
+        { title: 'Harvest Moon', duration: '4:07' },
+        { title: 'Long Road Home', duration: '5:14' },
+        { title: "Grandma's Hands (Reprise)", duration: '2:48' },
+      ],
+    },
   },
   {
     id: 'redbird-hollow',
@@ -58,6 +108,16 @@ export const sampleArtists: Artist[] = [
     bio: 'Redbird Hollow is a husband-and-wife duo writing porch-light hymns about small towns, long marriages, and the kind of faith that gets tested by ordinary years rather than dramatic ones.',
     photoUrl: '',
     streaming: { spotify: '#', appleMusic: '#' },
+    album: {
+      title: 'Porch Light Hymns',
+      tracks: [
+        { title: 'Porch Light', duration: '3:38' },
+        { title: 'Twenty Winters', duration: '4:41' },
+        { title: 'Redbird', duration: '3:24' },
+        { title: 'Small Town Grace', duration: '4:09' },
+        { title: 'Still Here', duration: '3:52' },
+      ],
+    },
   },
 ];
 

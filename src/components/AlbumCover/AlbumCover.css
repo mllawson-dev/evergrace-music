@@ -1,0 +1,13 @@
+.eg-album-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--eg-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--eg-charcoal-600);
+}
+
+.eg-album-cover__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

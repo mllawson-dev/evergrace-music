@@ -251,13 +251,6 @@
   gap: var(--eg-space-4);
 }
 
-.eg-footer {
-  text-align: center;
-  padding: var(--eg-space-6) 0 var(--eg-space-7);
-  color: var(--eg-cream-400);
-  font-size: var(--eg-text-sm);
-}
-
 .eg-section__footer {
   display: flex;
   justify-content: center;

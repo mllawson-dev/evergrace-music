@@ -88,6 +88,17 @@
   margin: 0;
 }
 
+.eg-artist-page__album {
+  display: flex;
+  gap: var(--eg-space-5);
+  align-items: flex-start;
+}
+
+.eg-artist-page__album-cover {
+  width: 160px;
+  flex-shrink: 0;
+}
+
 @media (max-width: 560px) {
   .eg-artist-page__header {
     flex-direction: column;
@@ -97,5 +108,14 @@
 
   .eg-artist-page__intro {
     align-items: center;
+  }
+
+  .eg-artist-page__album {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eg-artist-page__album-cover {
+    width: 200px;
   }
 }

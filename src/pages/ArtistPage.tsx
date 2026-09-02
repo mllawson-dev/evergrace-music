@@ -3,6 +3,8 @@ import { GenreBadge } from '../components/GenreBadge/GenreBadge';
 import { ArtistPhoto } from '../components/ArtistPhoto/ArtistPhoto';
 import { StreamingMerchButtons } from '../components/StreamingMerchButtons/StreamingMerchButtons';
 import { MediaPlayer } from '../components/MediaPlayer/MediaPlayer';
+import { AlbumCover } from '../components/AlbumCover/AlbumCover';
+import { TrackList } from '../components/TrackList/TrackList';
 import { TourDateList } from '../components/TourDateList/TourDateList';
 import { sampleArtists, sampleTourDates } from '../data/sampleData';
 import './ArtistPage.css';
@@ -53,10 +55,20 @@ export function ArtistPage() {
           <MediaPlayer
             variant="hero"
             genre={artist.genre}
-            trackTitle="Featured track"
+            trackTitle={artist.album.tracks[0].title}
             artistName={artist.name}
             audioSrc=""
           />
+        </div>
+      </section>
+
+      <section className="eg-artist-page__section">
+        <h2>{artist.album.title}</h2>
+        <div className="eg-artist-page__album">
+          <div className="eg-artist-page__album-cover">
+            <AlbumCover artist={artist} />
+          </div>
+          <TrackList tracks={artist.album.tracks} />
         </div>
       </section>
 

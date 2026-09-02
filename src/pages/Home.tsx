@@ -117,10 +117,6 @@ export function Home() {
           </Button>
         </div>
       </section>
-
-      <footer className="eg-footer">
-        <p>Evergrace Music &middot; One faith. Every voice.</p>
-      </footer>
     </main>
   );
 }
