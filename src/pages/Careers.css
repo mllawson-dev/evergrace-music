@@ -1,0 +1,33 @@
+.eg-careers-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--eg-space-5) var(--eg-space-4) var(--eg-space-7);
+  text-align: center;
+}
+
+.eg-careers-page__heading {
+  font-size: var(--eg-text-3xl);
+  margin-bottom: var(--eg-space-2);
+}
+
+.eg-careers-page__note {
+  color: var(--eg-cream-400);
+  margin-bottom: var(--eg-space-5);
+}
+
+.eg-careers-page__body {
+  text-align: left;
+  margin-bottom: var(--eg-space-4);
+}
+
+.eg-careers-page__email {
+  display: inline-block;
+  margin-top: var(--eg-space-3);
+  color: var(--eg-gold-300);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.eg-careers-page__email:hover {
+  text-decoration: underline;
+}

@@ -3,8 +3,6 @@ import { GenreBadge } from '../components/GenreBadge/GenreBadge';
 import { ArtistPhoto } from '../components/ArtistPhoto/ArtistPhoto';
 import { StreamingMerchButtons } from '../components/StreamingMerchButtons/StreamingMerchButtons';
 import { MediaPlayer } from '../components/MediaPlayer/MediaPlayer';
-import { AlbumCover } from '../components/AlbumCover/AlbumCover';
-import { TrackList } from '../components/TrackList/TrackList';
 import { TourDateList } from '../components/TourDateList/TourDateList';
 import { sampleArtists, sampleTourDates } from '../data/sampleData';
 import './ArtistPage.css';
@@ -27,7 +25,7 @@ export function ArtistPage() {
   const artistDates = sampleTourDates.filter((date) => date.artistId === artist.id);
 
   return (
-    <main className={`eg-artist-page eg-artist-page--${artist.genre} eg-grain-surface`}>
+    <main className={`eg-artist-page eg-artist-page--${artist.genre}`}>
       <Link to="/" className="eg-artist-page__back">
         &larr; All artists
       </Link>
@@ -51,25 +49,7 @@ export function ArtistPage() {
 
       <section className="eg-artist-page__section">
         <h2>Listen</h2>
-        <div className="eg-artist-page__player">
-          <MediaPlayer
-            variant="hero"
-            genre={artist.genre}
-            trackTitle={artist.album.tracks[0].title}
-            artistName={artist.name}
-            audioSrc=""
-          />
-        </div>
-      </section>
-
-      <section className="eg-artist-page__section">
-        <h2>{artist.album.title}</h2>
-        <div className="eg-artist-page__album">
-          <div className="eg-artist-page__album-cover">
-            <AlbumCover artist={artist} />
-          </div>
-          <TrackList tracks={artist.album.tracks} />
-        </div>
+        <MediaPlayer trackTitle="Featured track" artistName={artist.name} audioSrc={artist.audioSrc} />
       </section>
 
       {artistDates.length > 0 && (

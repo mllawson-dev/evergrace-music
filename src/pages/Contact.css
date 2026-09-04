@@ -1,0 +1,52 @@
+.eg-contact-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--eg-space-5) var(--eg-space-4) var(--eg-space-7);
+}
+
+.eg-contact-page__heading {
+  font-size: var(--eg-text-3xl);
+  text-align: center;
+  margin-bottom: var(--eg-space-2);
+}
+
+.eg-contact-page__note {
+  text-align: center;
+  color: var(--eg-cream-400);
+  margin-bottom: var(--eg-space-6);
+}
+
+.eg-contact-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--eg-space-4);
+}
+
+.eg-contact-page__card {
+  background: var(--eg-charcoal-800);
+  border: 1px solid var(--eg-charcoal-600);
+  border-radius: var(--eg-radius-md);
+  padding: var(--eg-space-5) var(--eg-space-4);
+}
+
+.eg-contact-page__card-heading {
+  font-size: var(--eg-text-lg);
+  margin-bottom: var(--eg-space-2);
+}
+
+.eg-contact-page__card-body {
+  color: var(--eg-cream-400);
+  font-size: var(--eg-text-sm);
+  margin: 0 0 var(--eg-space-3);
+}
+
+.eg-contact-page__card-email {
+  color: var(--eg-gold-300);
+  font-size: var(--eg-text-sm);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.eg-contact-page__card-email:hover {
+  text-decoration: underline;
+}

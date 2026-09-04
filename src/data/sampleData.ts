@@ -1,5 +1,17 @@
 import type { Artist } from '../types/Artist';
 import type { TourDate } from '../types/TourDate';
+import lanternHymnCover from '../assets/covers/lantern-hymn-cover.jpg';
+import stillWaterSoundCover from '../assets/covers/still-water-sound-cover.jpg';
+import ironcladRevivalCover from '../assets/covers/ironclad-revival-cover.jpg';
+import wildfireRemnantCover from '../assets/covers/wildfire-remnant-cover.jpg';
+import theDustyRoadCover from '../assets/covers/the-dusty-road-cover.jpg';
+import redbirdHollowCover from '../assets/covers/redbird-hollow-cover.jpg';
+import lanternHymnTrack from '../assets/audio/lantern-hymn.mp3';
+import stillWaterSoundTrack from '../assets/audio/still-water-sound.mp3';
+import ironcladRevivalTrack from '../assets/audio/ironclad-revival.mp3';
+import wildfireRemnantTrack from '../assets/audio/wildfire-remnant.mp3';
+import theDustyRoadTrack from '../assets/audio/the-dusty-road.mp3';
+import redbirdHollowTrack from '../assets/audio/redbird-hollow.mp3';
 
 export const sampleArtists: Artist[] = [
   {
@@ -8,19 +20,10 @@ export const sampleArtists: Artist[] = [
     genre: 'worship',
     tagline: 'We worship. We listen. We surrender.',
     bio: 'Lantern Hymn writes worship for the room, not the stage — songs built to be sung by a congregation that\u2019s still learning the words. Their sets favor space and silence as much as sound, letting a single acoustic line carry as much weight as a full band behind it.',
-    photoUrl: '',
+    photoUrl: lanternHymnCover,
+    audioSrc: lanternHymnTrack,
     streaming: { spotify: '#', appleMusic: '#' },
     merchUrl: '#',
-    album: {
-      title: 'Where Two or Three',
-      tracks: [
-        { title: 'Still Small Voice', duration: '4:12' },
-        { title: 'Kneeling Song', duration: '3:48' },
-        { title: 'Table for All', duration: '5:03' },
-        { title: 'Ashes to Amber', duration: '4:27' },
-        { title: 'Benediction', duration: '3:15' },
-      ],
-    },
   },
   {
     id: 'still-water-sound',
@@ -28,18 +31,9 @@ export const sampleArtists: Artist[] = [
     genre: 'worship',
     tagline: 'We wait. We breathe. We are found.',
     bio: 'Still Water Sound leans into the quiet end of worship — ambient pads, minimal percussion, and lyrics that read more like prayer than performance. Built for the moments in a service when nobody is trying to be impressive.',
-    photoUrl: '',
+    photoUrl: stillWaterSoundCover,
+    audioSrc: stillWaterSoundTrack,
     streaming: { spotify: '#', appleMusic: '#', youtube: '#' },
-    album: {
-      title: 'Selah',
-      tracks: [
-        { title: 'Before the Waking', duration: '5:20' },
-        { title: 'Selah', duration: '4:44' },
-        { title: 'Held', duration: '3:58' },
-        { title: 'Breath Prayer', duration: '6:02' },
-        { title: 'Dawn Liturgy', duration: '4:31' },
-      ],
-    },
   },
   {
     id: 'ironclad-revival',
@@ -47,18 +41,9 @@ export const sampleArtists: Artist[] = [
     genre: 'rock',
     tagline: 'We rise. We play. We proclaim.',
     bio: 'Ironclad Revival plays loud on purpose. Formed out of a youth-group garage band that never stopped touring, they bring arena-sized riffs to church basements and festival main stages alike, built for a crowd that wants to sing along at full volume.',
-    photoUrl: '',
+    photoUrl: ironcladRevivalCover,
+    audioSrc: ironcladRevivalTrack,
     streaming: { spotify: '#', youtube: '#' },
-    album: {
-      title: 'Forge & Flame',
-      tracks: [
-        { title: 'Battle Hymn (Redux)', duration: '3:33' },
-        { title: 'Unashamed', duration: '3:51' },
-        { title: 'Riot of Grace', duration: '4:02' },
-        { title: 'Steel Sharpens Steel', duration: '3:47' },
-        { title: 'Overcomer', duration: '4:18' },
-      ],
-    },
   },
   {
     id: 'wildfire-remnant',
@@ -66,19 +51,10 @@ export const sampleArtists: Artist[] = [
     genre: 'rock',
     tagline: 'We burn. We build. We remain.',
     bio: 'Wildfire Remnant writes the kind of rock that\u2019s built for a mosh pit that turns into an altar call halfway through. Heavier and darker than most of the label\u2019s roster, they\u2019re proof Evergrace isn\u2019t chasing one sound.',
-    photoUrl: '',
+    photoUrl: wildfireRemnantCover,
+    audioSrc: wildfireRemnantTrack,
     streaming: { spotify: '#' },
     merchUrl: '#',
-    album: {
-      title: 'Ashes That Remain',
-      tracks: [
-        { title: 'Burn It Down', duration: '3:29' },
-        { title: 'Remnant', duration: '4:05' },
-        { title: 'Wildfire', duration: '3:44' },
-        { title: 'Scorched Earth Hymn', duration: '4:52' },
-        { title: "What's Left Standing", duration: '4:11' },
-      ],
-    },
   },
   {
     id: 'the-dusty-road',
@@ -86,19 +62,10 @@ export const sampleArtists: Artist[] = [
     genre: 'country',
     tagline: 'We tell stories. We honor roots. We give thanks.',
     bio: 'The Dusty Road writes the kind of country gospel that sounds like it\u2019s always existed — front-porch harmonies, steel guitar, and lyrics about harvests, hard years, and grace that shows up anyway. Every song is a story first, a sermon second.',
-    photoUrl: '',
+    photoUrl: theDustyRoadCover,
+    audioSrc: theDustyRoadTrack,
     streaming: { spotify: '#', appleMusic: '#', youtube: '#' },
     merchUrl: '#',
-    album: {
-      title: 'Harvest Moon Hymnal',
-      tracks: [
-        { title: 'Dust and Grace', duration: '3:56' },
-        { title: 'Front Porch Gospel', duration: '4:22' },
-        { title: 'Harvest Moon', duration: '4:07' },
-        { title: 'Long Road Home', duration: '5:14' },
-        { title: "Grandma's Hands (Reprise)", duration: '2:48' },
-      ],
-    },
   },
   {
     id: 'redbird-hollow',
@@ -106,18 +73,9 @@ export const sampleArtists: Artist[] = [
     genre: 'country',
     tagline: 'We remember. We carry on. We come home.',
     bio: 'Redbird Hollow is a husband-and-wife duo writing porch-light hymns about small towns, long marriages, and the kind of faith that gets tested by ordinary years rather than dramatic ones.',
-    photoUrl: '',
+    photoUrl: redbirdHollowCover,
+    audioSrc: redbirdHollowTrack,
     streaming: { spotify: '#', appleMusic: '#' },
-    album: {
-      title: 'Porch Light Hymns',
-      tracks: [
-        { title: 'Porch Light', duration: '3:38' },
-        { title: 'Twenty Winters', duration: '4:41' },
-        { title: 'Redbird', duration: '3:24' },
-        { title: 'Small Town Grace', duration: '4:09' },
-        { title: 'Still Here', duration: '3:52' },
-      ],
-    },
   },
 ];
 

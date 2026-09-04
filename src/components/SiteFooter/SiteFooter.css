@@ -1,6 +1,112 @@
-.eg-site-footer {
-  text-align: center;
-  padding: var(--eg-space-6) var(--eg-space-4) var(--eg-space-7);
+.eg-footer {
+  border-top: 1px solid var(--eg-charcoal-600);
+  margin-top: var(--eg-space-6);
+  padding: var(--eg-space-6) var(--eg-space-4) var(--eg-space-5);
+}
+
+.eg-footer__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.eg-footer__top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--eg-space-5);
+  padding-bottom: var(--eg-space-5);
+}
+
+.eg-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eg-space-2);
+}
+
+.eg-footer__brand-mark {
+  display: flex;
+  align-items: center;
+  gap: var(--eg-space-2);
+  text-decoration: none;
+}
+
+.eg-footer__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.eg-footer__wordmark {
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  color: var(--eg-cream-100);
+  font-size: var(--eg-text-base);
+}
+
+.eg-footer__tagline {
   color: var(--eg-cream-400);
   font-size: var(--eg-text-sm);
+  margin: 0;
+  max-width: 32ch;
+}
+
+.eg-footer__col-heading {
+  font-family: var(--eg-font-heading);
+  font-weight: 600;
+  font-size: var(--eg-text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--eg-cream-400);
+  margin: 0 0 var(--eg-space-3);
+}
+
+.eg-footer__col-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--eg-space-2);
+}
+
+.eg-footer__link {
+  color: var(--eg-cream-400);
+  text-decoration: none;
+  font-size: var(--eg-text-sm);
+  transition: color var(--eg-motion-fast) var(--eg-ease-standard);
+}
+
+.eg-footer__link:hover,
+.eg-footer__link:focus-visible {
+  color: var(--eg-gold-300);
+}
+
+.eg-footer__link--worship:hover,
+.eg-footer__link--worship:focus-visible {
+  color: var(--eg-worship-300);
+}
+
+.eg-footer__link--rock:hover,
+.eg-footer__link--rock:focus-visible {
+  color: var(--eg-rock-300);
+}
+
+.eg-footer__link--country:hover,
+.eg-footer__link--country:focus-visible {
+  color: var(--eg-country-300);
+}
+
+.eg-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--eg-space-2);
+  padding-top: var(--eg-space-4);
+  border-top: 1px solid var(--eg-charcoal-600);
+  font-size: var(--eg-text-xs);
+  color: var(--eg-cream-400);
+}
+
+.eg-footer__copyright,
+.eg-footer__made {
+  margin: 0;
 }

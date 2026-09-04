@@ -46,7 +46,24 @@ export function Home() {
   return (
     <main className="eg-home eg-grain-surface">
       <section className="eg-hero">
-        <span className="eg-hero__rays animate-eg-ray-drift motion-reduce:animate-none" aria-hidden="true" />
+        <span
+          className="eg-hero__cloud eg-hero__cloud--a animate-eg-sunrise-cloud-a motion-reduce:animate-none"
+          aria-hidden="true"
+        />
+        <span
+          className="eg-hero__cloud eg-hero__cloud--b animate-eg-sunrise-cloud-b motion-reduce:animate-none"
+          aria-hidden="true"
+        />
+        <span className="eg-hero__ray-mask" aria-hidden="true">
+          <span className="eg-hero__ray-box">
+            <span className="eg-hero__ray-spin animate-eg-sunrise-ray-spin motion-reduce:animate-none" />
+          </span>
+        </span>
+        <span
+          className="eg-hero__bloom animate-eg-sunrise-glow-breathe motion-reduce:animate-none"
+          aria-hidden="true"
+        />
+        <span className="eg-hero__haze" aria-hidden="true" />
         <p className="eg-hero__ghost text-eg-display" aria-hidden="true">
           Evergrace
         </p>
@@ -69,7 +86,7 @@ export function Home() {
               variant="hero"
               trackTitle="Featured track"
               artistName={featuredArtists[0].name}
-              audioSrc=""
+              audioSrc={featuredArtists[0].audioSrc}
             />
           </div>
         </div>

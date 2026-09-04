@@ -103,8 +103,9 @@ export function StyleGuide() {
           <code>--eg-ease-*</code>) and are used two ways: plain CSS transitions/
           <code>@keyframes</code> inside component stylesheets, or — for the handful of
           ambient/decorative animations below — named Tailwind utilities aliased in{' '}
-          <code>global.css</code> (<code>animate-eg-eq-bar</code>, <code>animate-eg-ray-drift</code>
-          , <code>animate-eg-hero-reveal</code>, <code>ease-eg-standard</code>). Arbitrary{' '}
+          <code>global.css</code> (<code>animate-eg-eq-bar</code>,{' '}
+          <code>animate-eg-sunrise-ray-spin</code>, <code>animate-eg-hero-reveal</code>,{' '}
+          <code>ease-eg-standard</code>). Arbitrary{' '}
           <code>animate-[…]</code>/<code>duration-[…]</code> bracket values are avoided — they
           don't reliably generate in this project's Vite/Tailwind combination — so any new motion
           gets a named token first.
@@ -207,12 +208,17 @@ export function StyleGuide() {
       <section>
         <h2>Media player</h2>
         <p className="eg-style-guide__note">
-          No audio source wired up yet — this demonstrates the idle/error state honestly rather
-          than faking a working player. Press play to see the equalizer only animate once
-          playback actually starts.
+          Each artist carries a short original demo track (synthesized in-house — no samples, no
+          licensing questions) so the player below is wired to real audio rather than faking a
+          working state. The equalizer only animates once playback actually starts. The idle/error
+          states still render honestly too — pass an empty <code>audioSrc</code> to see them.
         </p>
         <p className="eg-style-guide__note">Full (artist page):</p>
-        <MediaPlayer trackTitle="Sample track" artistName="Lantern Hymn" audioSrc="" />
+        <MediaPlayer
+          trackTitle="Featured track"
+          artistName={sampleArtists[0].name}
+          audioSrc={sampleArtists[0].audioSrc}
+        />
 
         <p className="eg-style-guide__note" style={{ marginTop: 'var(--eg-space-4)' }}>
           Hero — the label-level &ldquo;glowing focal object&rdquo; used on the homepage. Defaults
@@ -220,10 +226,33 @@ export function StyleGuide() {
           an artist-specific placement instead.
         </p>
         <div className="eg-style-guide__hero-player-grid">
-          <MediaPlayer variant="hero" trackTitle="Featured track" artistName="Lantern Hymn" audioSrc="" />
-          <MediaPlayer variant="hero" trackTitle="Featured track" artistName="Lantern Hymn" audioSrc="" genre="worship" />
-          <MediaPlayer variant="hero" trackTitle="Featured track" artistName="Ironclad Revival" audioSrc="" genre="rock" />
-          <MediaPlayer variant="hero" trackTitle="Featured track" artistName="The Dusty Road" audioSrc="" genre="country" />
+          <MediaPlayer
+            variant="hero"
+            trackTitle="Featured track"
+            artistName={sampleArtists[0].name}
+            audioSrc={sampleArtists[0].audioSrc}
+          />
+          <MediaPlayer
+            variant="hero"
+            trackTitle="Featured track"
+            artistName={sampleArtists[0].name}
+            audioSrc={sampleArtists[0].audioSrc}
+            genre="worship"
+          />
+          <MediaPlayer
+            variant="hero"
+            trackTitle="Featured track"
+            artistName={sampleArtists[2].name}
+            audioSrc={sampleArtists[2].audioSrc}
+            genre="rock"
+          />
+          <MediaPlayer
+            variant="hero"
+            trackTitle="Featured track"
+            artistName={sampleArtists[4].name}
+            audioSrc={sampleArtists[4].audioSrc}
+            genre="country"
+          />
         </div>
       </section>
     </div>
