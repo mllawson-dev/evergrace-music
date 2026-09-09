@@ -54,7 +54,7 @@ export function AlbumCover({ artist }: AlbumCoverProps) {
       <svg
         viewBox="0 0 200 200"
         role="img"
-        aria-label={`${artist.album.title} cover art`}
+        aria-label={`${artist.name} cover art`}
         className="eg-album-cover__svg"
       >
         <defs>
