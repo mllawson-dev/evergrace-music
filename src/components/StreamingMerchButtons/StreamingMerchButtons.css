@@ -8,3 +8,9 @@
   flex-direction: column;
   align-items: stretch;
 }
+
+.eg-stream-merch__note {
+  margin: var(--eg-space-2) 0 0;
+  color: var(--eg-cream-400);
+  font-size: var(--eg-text-xs);
+}

@@ -48,6 +48,13 @@
   max-width: 32ch;
 }
 
+.eg-footer__concept {
+  margin: var(--eg-space-2) 0 0;
+  max-width: 32ch;
+  color: var(--eg-gold-300);
+  font-size: var(--eg-text-xs);
+}
+
 .eg-footer__col-heading {
   font-family: var(--eg-font-heading);
   font-weight: 600;

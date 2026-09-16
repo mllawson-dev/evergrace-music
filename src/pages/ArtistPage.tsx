@@ -26,13 +26,13 @@ export function ArtistPage() {
 
   return (
     <main className={`eg-artist-page eg-artist-page--${artist.genre}`}>
-      <Link to="/" className="eg-artist-page__back">
+      <Link to="/artists" className="eg-artist-page__back">
         &larr; All artists
       </Link>
 
       <header className="eg-artist-page__header">
         <div className="eg-artist-page__photo">
-          <ArtistPhoto artist={artist} />
+          <ArtistPhoto artist={artist} priority />
         </div>
         <div className="eg-artist-page__intro">
           <GenreBadge genre={artist.genre} />

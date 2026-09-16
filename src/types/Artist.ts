@@ -1,14 +1,14 @@
 import type { Genre } from './Genre';
 
-export interface Track {
-  title: string;
-  duration: string;
-}
-
 export interface StreamingLinks {
   spotify?: string;
   appleMusic?: string;
   youtube?: string;
+}
+
+export interface Track {
+  title: string;
+  duration: string;
 }
 
 export interface Artist {

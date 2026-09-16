@@ -10,6 +10,7 @@ import { Careers } from './pages/Careers';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { StyleGuide } from './pages/StyleGuide';
+import { Concept } from './pages/Concept';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/concept" element={<Concept />} />
       </Route>
       {/* Style guide intentionally sits outside SiteLayout — unlinked dev documentation, not part of the public site nav */}
       <Route path="/style-guide" element={<StyleGuide />} />

@@ -16,6 +16,7 @@
   font-family: var(--eg-font-heading);
   font-weight: 600;
   font-size: var(--eg-text-base);
+  min-height: 44px;
 }
 
 .eg-site-header__icon {
@@ -29,6 +30,9 @@
 }
 
 .eg-site-header__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: var(--eg-text-sm);
   color: var(--eg-cream-400);
   text-decoration: none;

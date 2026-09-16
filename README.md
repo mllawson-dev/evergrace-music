@@ -24,11 +24,11 @@ working interface, not just a static style guide.
   ArtistCard, ArtistPhoto, TourDateList, StreamingMerchButtons, MediaPlayer,
   SiteHeader/SiteLayout).
 - `src/pages/` — Home, Roster (`/artists`), an artist page
-  (`/artists/:artistId`), Tour (`/tour`).
+  (`/artists/:artistId`), Tour (`/tour`), and the portfolio-facing project
+  notes (`/concept`).
 - `src/pages/StyleGuide.tsx` (`/style-guide`) — living, functional
-  documentation of every token and component. Deliberately **not** linked
-  from the site's real navigation — it's dev-facing reference, not part of
-  the public IA.
+  documentation of every token and component. It is surfaced only through
+  the project-notes page, keeping it outside the fictional label navigation.
 - `src/data/sampleData.ts` — fictional roster and tour data. See a note on
   why this project doesn't use real artists' names or photos: real Christian
   radio-network artist directories were considered and rejected, since
@@ -62,3 +62,6 @@ npm run dev
 ```
 npm run build
 ```
+
+`vercel.json` includes the single-page-app fallback required for direct
+visits to nested routes such as `/artists/lantern-hymn` and `/concept`.

@@ -54,8 +54,7 @@ export function Privacy() {
       <section>
         <h2>Contact</h2>
         <p>
-          Questions about this policy can go to{' '}
-          <a href="mailto:hello@evergracemusic.com">hello@evergracemusic.com</a>.
+          Demonstration contact: <span>hello@evergracemusic.com (concept only)</span>.
         </p>
       </section>
 
