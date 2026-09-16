@@ -41,12 +41,16 @@
 }
 
 .eg-contact-page__card-email {
+  display: flex;
+  flex-direction: column;
+  gap: var(--eg-space-1);
   color: var(--eg-gold-300);
   font-size: var(--eg-text-sm);
   font-weight: 500;
-  text-decoration: none;
 }
 
-.eg-contact-page__card-email:hover {
-  text-decoration: underline;
+.eg-contact-page__card-email small {
+  color: var(--eg-cream-400);
+  font-size: var(--eg-text-xs);
+  font-weight: 400;
 }

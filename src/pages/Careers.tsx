@@ -17,9 +17,9 @@ export function Careers() {
         introductions on file for when a role opens up.
       </p>
 
-      <a href="mailto:careers@evergracemusic.com" className="eg-careers-page__email">
-        careers@evergracemusic.com
-      </a>
+      <span className="eg-careers-page__email">
+        careers@evergracemusic.com <small>· concept only</small>
+      </span>
     </main>
   );
 }

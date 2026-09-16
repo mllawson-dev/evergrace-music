@@ -15,6 +15,7 @@ export function SiteFooter() {
               <span className="eg-footer__wordmark">Evergrace Music</span>
             </Link>
             <p className="eg-footer__tagline">One faith. Every voice.</p>
+            <p className="eg-footer__concept">Self-initiated concept · fictional label and roster.</p>
           </div>
 
           <div className="eg-footer__col">
@@ -87,7 +88,7 @@ export function SiteFooter() {
         </div>
 
         <div className="eg-footer__bottom">
-          <p className="eg-footer__copyright">&copy; {YEAR} Evergrace Music. All rights reserved.</p>
+          <p className="eg-footer__copyright">&copy; {YEAR} Evergrace Music concept.</p>
           <p className="eg-footer__made">Worship. Rock. Country. One faith.</p>
         </div>
       </div>

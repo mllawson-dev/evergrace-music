@@ -1,6 +1,8 @@
 .eg-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-height: 44px;
   gap: var(--eg-space-2);
   font-family: var(--eg-font-body);
   font-weight: 500;

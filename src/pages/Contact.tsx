@@ -22,16 +22,20 @@ export function Contact() {
   return (
     <main className="eg-contact-page">
       <h1 className="eg-contact-page__heading">Contact</h1>
-      <p className="eg-contact-page__note">Reach out — we read everything ourselves.</p>
+      <p className="eg-contact-page__note">
+        Demonstration contact points for this self-initiated concept. These addresses are fictional
+        and inactive.
+      </p>
 
       <div className="eg-contact-page__grid">
         {CONTACT_CARDS.map((card) => (
           <div key={card.heading} className="eg-contact-page__card">
             <h2 className="eg-contact-page__card-heading">{card.heading}</h2>
             <p className="eg-contact-page__card-body">{card.body}</p>
-            <a href={`mailto:${card.email}`} className="eg-contact-page__card-email">
+            <span className="eg-contact-page__card-email" aria-label={`${card.email}, concept only`}>
               {card.email}
-            </a>
+              <small>Concept only</small>
+            </span>
           </div>
         ))}
       </div>

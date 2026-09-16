@@ -26,8 +26,14 @@ export function TourDateList({ dates, variant = 'full', artistNames }: TourDateL
             </span>
           </span>
           {date.status === 'upcoming' && date.ticketUrl && (
-            <Button variant="primary" className="eg-tour-row__action">
-              Tickets
+            <Button
+              variant="primary"
+              className="eg-tour-row__action"
+              disabled={date.ticketUrl === '#'}
+              title={date.ticketUrl === '#' ? 'Concept destination — intentionally inactive' : undefined}
+              onClick={() => date.ticketUrl !== '#' && window.open(date.ticketUrl, '_blank', 'noopener,noreferrer')}
+            >
+              {date.ticketUrl === '#' ? 'Demo tickets' : 'Tickets'}
             </Button>
           )}
           {date.status === 'sold-out' && <span className="eg-tour-row__flag">Sold out</span>}

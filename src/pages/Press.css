@@ -74,3 +74,12 @@
   height: 20px;
   flex-shrink: 0;
 }
+
+.eg-press-page__concept-contact {
+  color: var(--eg-gold-300);
+  font-weight: 500;
+}
+
+.eg-press-page__section small {
+  color: var(--eg-cream-400);
+}

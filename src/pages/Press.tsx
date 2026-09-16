@@ -44,8 +44,8 @@ export function Press() {
       <section className="eg-press-page__section">
         <h2>Media contact</h2>
         <p>
-          For interview requests, high-resolution photos, or additional assets, reach out at{' '}
-          <a href="mailto:press@evergracemusic.com">press@evergracemusic.com</a>.
+          Demonstration contact: <span className="eg-press-page__concept-contact">press@evergracemusic.com</span>{' '}
+          <small>(concept only)</small>.
         </p>
       </section>
     </main>
